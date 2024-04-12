@@ -1,9 +1,7 @@
 applications:
-  - name: retail-source-app
+  - name: api-gateway
     memory: 14000M
     log-rate-limit-per-second: -1
-    services:
-      - retail-rabbitmq
     env:
       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 17.+}}'
       eureka.client.service-url.defaultZone: http://localhost:8761/eureka

@@ -7,3 +7,4 @@ applications:
     env:
       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 17.+}}'
       retail.customer.id: 'nyla'
+      eureka.client.service-url.defaultZone: http://localhost:8761/eureka

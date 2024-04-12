@@ -47,13 +47,6 @@
 			<version>4.1.97.Final</version>
 		</dependency>
 
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
-
-
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>

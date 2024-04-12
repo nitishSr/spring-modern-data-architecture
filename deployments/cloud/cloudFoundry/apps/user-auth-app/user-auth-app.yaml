@@ -1,0 +1,19 @@
+applications:
+  - name: user-auth-app
+    memory: 14000M
+    log-rate-limit-per-second: -1
+    services:
+      - retail-sql
+    env:
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 17.+}}'
+      spring.profiles.active: 'mysql'
+
+      spring.datasource.url: ${vcap.services.mysql.credentials.jdbcUrl}/retailauth?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf-8&autoReconnect=true
+      spring.datasource.username: ${vcap.services.mysql.credentials.username}
+      spring.datasource.password: ${vcap.services.mysql.credentials.password}
+      spring.datasource.driver-class-name: com.mysql.cj.jdbc.Driver
+      spring.jpa.show-sql: true
+      spring.jpa.properties.hibernate.dialect: org.hibernate.dialect.MySQLDialect
+      spring.jpa.generate-ddl: true
+      spring.jpa.hibernate.ddl-auto: update
+      eureka.client.serviceUrl.defaultZone: http://localhost:8761/eureka

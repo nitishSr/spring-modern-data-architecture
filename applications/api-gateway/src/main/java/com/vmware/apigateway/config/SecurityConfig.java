@@ -1,4 +1,4 @@
-package com.vmware.apigateway.config;
+/*package com.vmware.apigateway.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -9,7 +9,7 @@ import org.springframework.security.web.server.SecurityWebFilterChain;
 @Configuration
 public class SecurityConfig {
 
-    /*@Bean
+    @Bean
     public SecurityWebFilterChain securityWebFilterChain (ServerHttpSecurity http) throws Exception {
         http.csrf().disable()
                 .authorizeExchange()
@@ -20,5 +20,7 @@ public class SecurityConfig {
                 ;
 
         return http.build();
-    }*/
+    }
 }
+*/
+

@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: RETAIL-WEB-APP
+          uri: lb://RETAIL-WEB-APP
+          predicates:
+            - Path=/**
+        - id: AUTH-SERVICE
+          uri: lb://AUTH-SERVICE
+          predicates:
+            - Path=/**
+        - id: RETAIL-SOURCE-APP
+          uri: lb://RETAIL-SOURCE-APP
+          predicates:
+            - Path=/**
+        - id: JDBC-SQL-REST-APP
+          uri: lb://JDBC-SQL-REST-APP
+          predicates:
+            - Path=/**
+
+server:
+  port: 8081
+
+eureka:
+  client:
+    service-url:
+      defaultZone: "http://localhost:8761/eureka"
