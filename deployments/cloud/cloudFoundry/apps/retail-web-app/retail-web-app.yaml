@@ -1,6 +1,7 @@
 applications:
   - name: retail-cache-sink-app
     memory: 14000M
+    random-route: true
     log-rate-limit-per-second: -1
     services:
       - retail-gf-redis
