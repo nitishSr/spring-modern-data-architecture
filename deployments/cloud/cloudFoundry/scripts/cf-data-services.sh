@@ -16,12 +16,12 @@ cf create-service p-cloudcache extra-small  retail-gf-redis -c '{"gemfire_for_re
 ## SQL
 
 #cf create-service p.mysql free retail-sql
-cf create-service postgres   on-demand-postgres-small retail-sql
+cf create-service postgres  on-demand-postgres-db retail-sql
 
 
 ## RabbitMQ
 
-cf create-service p.rabbitmq single-node retail-rabbitmq
+cf create-service p.rabbitmq on-demand-plan retail-rabbitmq
 
 #cf update-service retail-rabbitmq -c '{ "plugins": { "rabbitmq_stream": true, "rabbitmq_stream_management": true } }'
 

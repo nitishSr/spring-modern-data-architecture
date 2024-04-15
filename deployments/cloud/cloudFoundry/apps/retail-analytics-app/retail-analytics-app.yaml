@@ -5,7 +5,7 @@ applications:
     log-rate-limit-per-second: -1
     services:
       - retail-rabbitmq
-      - retail-sql
+      - retail-mysql
     env:
       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 17.+}}'
       spring.profiles.active: 'mysql,rabbit-product-quorum'
