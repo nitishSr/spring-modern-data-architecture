@@ -6,7 +6,8 @@ applications:
       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 17.+}}'
       eureka.client.register-with-eureka: false
       eureka.client.fetch-registry: false
-      eureka.instance.prefer-ip-address: true
+        #eureka.instance.prefer-ip-address: true
+      eureka.instance.hostname: eureka-server.apps.tanzu.vmw
       eureka.client.service-url.defaultZone: https://eureka-server.apps.tanzu.vmw/eureka
       spring.freemarker.settings.template_exception_handler: rethrow
 

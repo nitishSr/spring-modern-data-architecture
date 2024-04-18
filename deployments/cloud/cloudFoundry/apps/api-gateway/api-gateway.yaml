@@ -5,3 +5,4 @@ applications:
     env:
       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 17.+}}'
       eureka.client.service-url.defaultZone: https://eureka-server.apps.tanzu.vmw/eureka
+      eureka.instance.hostname: eureka-server.apps.tanzu.vmw
