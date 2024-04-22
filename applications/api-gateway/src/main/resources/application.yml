@@ -1,0 +1,44 @@
+# spring:
+#   application:
+#     name: api-gateway
+#   cloud:
+#     gateway:
+#       globalcors:
+#         cors-configurations:
+#           '[/**]':
+#             allowedOrigins: "*"
+#             allowedMethods: "*"
+#             allowedHeaders: "*"
+#       discovery:
+#         locator:
+#           enabled: true
+#           lower-case-service-id: true
+#       routes:
+#         - id: RETAIL-WEB-APP
+#           uri: https://retail-web-app-restless-nyala-tk.apps.tanzu.vmw
+#           predicates:
+#             - Path=/**
+#         - id: USER-AUTH-APP
+#           uri: https://user-auth-app-reflective-okapi-dh.apps.tanzu.vmw
+#           predicates:
+#             - Path=/**,/*/**
+#         - id: RETAIL-SOURCE-APP
+#           uri: https://retail-source-app-hilarious-meerkat-df.apps.tanzu.vmw
+#           predicates:
+#             - Path=/**
+#         - id: JDBC-SQL-REST-APP
+#           uri: https://jdbc-sql-console-app-generous-platypus-nu.apps.tanzu.vmw
+#           predicates:
+#             - Path=/**
+
+# server:
+#   port: 8081
+
+# eureka:
+#   client:
+#     service-url:
+#       defaultZone: "https://eureka-server.apps.tanzu.vmw/eureka"
+#   instance:
+#     hostname: eureka-server.apps.tanzu.vmw
+#     secure-port: 443
+#     secure-port-enabled: true

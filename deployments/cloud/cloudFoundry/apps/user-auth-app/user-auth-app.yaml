@@ -18,5 +18,5 @@ applications:
       spring.jpa.generate-ddl: true
       spring.jpa.hibernate.ddl-auto: update
       eureka.client.serviceUrl.defaultZone: https://eureka-server.apps.tanzu.vmw/eureka
-      eureka.instance.prefer-ip-address: false
+
       

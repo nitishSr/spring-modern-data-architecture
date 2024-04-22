@@ -4,12 +4,18 @@
         <link rel="stylesheet" href="styles/styles.css">
 
 
-        <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+        <!--<script src="/webjars/sockjs-client/sockjs.min.js"></script>
         <script src="/webjars/stomp-websocket/stomp.min.js"></script>
-        <script src="/webjars/jquery/jquery.min.js"></script>
+        <script src="/webjars/jquery/jquery.min.js"></script> -->
+
+         <script src="webjars/sockjs-client/sockjs.min.js"></script>
+        <script src="webjars/stomp-websocket/stomp.min.js"></script>
+        <script src="webjars/jquery/jquery.min.js"></script>
+
+
         <script>
                    //Web Sockets
-        var socket = new SockJS('/gs-guide-websocket');
+        var socket = new SockJS('gs-guide-websocket');
         stompClient = Stomp.over(socket);
         stompClient.connect({}, function (frame) {
         console.log('Connected: ' + frame);
