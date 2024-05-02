@@ -3,12 +3,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="styles/styles.css">
 
-
-        <!--<script src="/webjars/sockjs-client/sockjs.min.js"></script>
-        <script src="/webjars/stomp-websocket/stomp.min.js"></script>
-        <script src="/webjars/jquery/jquery.min.js"></script> -->
-
-         <script src="webjars/sockjs-client/sockjs.min.js"></script>
+        <script src="webjars/sockjs-client/sockjs.min.js"></script>
         <script src="webjars/stomp-websocket/stomp.min.js"></script>
         <script src="webjars/jquery/jquery.min.js"></script>
 
