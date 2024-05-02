@@ -1,8 +1,12 @@
 applications:
   - name: api-gateway
-    memory: 14000M
-    random-route: true
+    memory: 5000M
     log-rate-limit-per-second: -1
     env:
       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 17.+}}'
-      eureka.client.service-url.defaultZone: http://localhost:8761/eureka
+      eureka.client.service-url.defaultZone: https://eureka-server.apps.tanzu.vmw/eureka
+      eureka.instance.hostname: eureka-server.apps.tanzu.vmw
+      server.tomcat.remoteip.host-header: x-forwarded-for
+      server.tomcat.remoteip.protocol-header: x-forwarded-proto
+      server.tomcat.redirect-context-root: false
+      server.forward-headers-strategy: framework

@@ -1,5 +1,5 @@
 applications:
-  - name: retail-cache-sink-app
+  - name: retail-web-app
     memory: 14000M
     random-route: true
     log-rate-limit-per-second: -1
@@ -8,4 +8,6 @@ applications:
     env:
       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 17.+}}'
       retail.customer.id: 'nyla'
-      eureka.client.service-url.defaultZone: http://localhost:8761/eureka
+      spring.data.gemfire.pool.default.locators: 58648a2f-ad0a-4b0a-9ea4-f7c3590432ba.locator.tas-services.service-instance-e9ac8531-f568-4084-ae91-0a9469aef986.bosh[55221],de90c4a8-7927-47cd-84f1-e0ff38a31ac7.locator.tas-services.service-instance-e9ac8531-f568-4084-ae91-0a9469aef986.bosh[55221],f0dfeb70-c67b-4d99-8f32-c8e82b2191f4.locator.tas-services.service-instance-e9ac8531-f568-4084-ae91-0a9469aef986.bosh[55221]
+      spring.profiles.active: gemfire
+      eureka.client.service-url.defaultZone: https://eureka-server.apps.tanzu.vmw/eureka

@@ -1,11 +1,12 @@
 applications:
   - name: eureka-server
-    memory: 14000M
-    random-route: true
+    memory: 5000M
     log-rate-limit-per-second: -1
     env:
       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 17.+}}'
       eureka.client.register-with-eureka: false
       eureka.client.fetch-registry: false
-      eureka.instance.prefer-ip-address: true
-      eureka.client.service-url.defaultZone: http://localhost:8761/eureka
+      eureka.instance.hostname: eureka-server.apps.tanzu.vmw
+      eureka.client.service-url.defaultZone: https://eureka-server.apps.tanzu.vmw/eureka
+      spring.freemarker.settings.template_exception_handler: rethrow
+

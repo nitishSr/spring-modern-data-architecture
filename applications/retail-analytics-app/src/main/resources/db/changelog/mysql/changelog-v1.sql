@@ -3,7 +3,7 @@
 
 
 CREATE TABLE customer_orders (
-	id    integer PRIMARY KEY AUTO_INCREMENT,
+	id integer AUTO_INCREMENT PRIMARY KEY,
 	customer_id varchar(255) NULL,
 	order_id int8 NULL,
 	product_id varchar(255) NULL,

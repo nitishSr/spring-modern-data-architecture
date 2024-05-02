@@ -46,7 +46,7 @@ public class AuthService {
 
     private Role checkRoleExists(){
         Role role = new Role();
-        role.setName("ROLE_USER");
+        role.setName("ROLE_ADMIN");
         return roleRepository.save(role);
     }
 
